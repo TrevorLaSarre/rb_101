@@ -1,0 +1,5 @@
+numbers = [1, 2, 3, 4, 5]
+
+The delete_at method takes as an argument the index of the element that you would like to delete. For instance, numbers.delete_at(1) would delete the numbers
+at index [1], which in this case is the integer 2. The delete method, however, takes as an argument the actual element that you would like to delete. For 
+instance, numbers.delete(1) would delete the numbers 1. Importantly, both of these methods return the element that they deleted and mutate the caller.

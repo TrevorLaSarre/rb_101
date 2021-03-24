@@ -2,10 +2,11 @@
 # Ask user for operation to perform
 # Perform the operation on the 2 numbers
 # Output the result
-# at the top of file
 
 require 'yaml'
 MESSAGES = YAML.load_file('calculator_messages.yml')
+
+LANGUAGE = 'en'
 
 def prompt(message)
   puts "=> #{message}"
@@ -37,14 +38,14 @@ def operation_to_message(op)
 x
 end
 
-prompt(MESSAGES["welcome"])
+prompt(MESSAGES[LANGUAGE]["welcome"])
 
 name = ""
 loop do
   name = gets.chomp
 
   if name.empty?
-    prompt(MESSAGES["valid_name_error"])
+    prompt(MESSAGES[LANGUAGE]["valid_name_error"])
   else
     break
   end
@@ -55,25 +56,25 @@ prompt("Hi, #{name}!")
 loop do # Main Loop
   number1 = ""
   loop do
-    prompt(MESSAGES["first"])
+    prompt(MESSAGES[LANGUAGE]["first"])
     number1 = gets.chomp
 
     if valid_number?(number1)
       break
     else
-      prompt(MESSAGES["valid_number_error"])
+      prompt(MESSAGES[LANGUAGE]["valid_number_error"])
     end
   end
 
   number2 = ""
   loop do
-    prompt(MESSAGES["second"])
+    prompt(MESSAGES[LANGUAGE]["second"])
     number2 = gets.chomp
 
     if valid_number?(number2)
       break
     else
-      prompt(MESSAGES["valid_number_error"])
+      prompt(MESSAGES[LANGUAGE]["valid_number_error"])
     end
   end
 
@@ -95,7 +96,7 @@ loop do # Main Loop
     if %w(1 2 3 4).include?(operation)
       break
     else
-      prompt(MESSAGES["operation_error"])
+      prompt(MESSAGES[LANGUAGE]["operation_error"])
     end
   end
 
@@ -119,4 +120,4 @@ loop do # Main Loop
   break unless answer.downcase.start_with?("y")
 end
 
-prompt(MESSAGES["exit"])
+prompt(MESSAGES[LANGUAGE]["exit"])

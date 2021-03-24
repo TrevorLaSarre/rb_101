@@ -1,0 +1,15 @@
+The ! in ruby is used in a few distinct ways. When appearing before a variable, value, or equal sign, it generally means "NOT", or the opposit of that
+thing. For instance != means "not equal" and !true means "not true" (i.e. false). When used in front of a value, it inverts the truthiness of that value
+(i.e. !3 and !"cat" evaluate as "false" and !nil and !false evaluate as "true"). Addiitonally, methods that end with a ! typically mutate the caller.
+However, this is simply convention and can not be counted on as a hard and fast rule. 
+
+The ? in ruby also has a few distinct uses. It can be prepended on an integer to return a string version of that integer (i.e. ?3 evaluates as "3"). More
+commonly, it is used on the end of a method name to indicate that that method returns true or false. Finally, it is used as a character in the ternary 
+operator. 
+
+1. != means "not equal" and is often used in conditional statements. (i.e. If number != 3...)
+2. !user_name == false
+3. [1, 2, 2, 2, 3].unique! == [1, 2, 3]
+4. ?3 == "3"
+5. 3.odd? == true
+6. !!user_name == true

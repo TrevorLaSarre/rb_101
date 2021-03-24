@@ -1,0 +1,65 @@
+1. Casual
+    - Given two integers
+    - Set the value of a variable equal to the sum of those integers
+    - Return that variable
+  
+  Formal
+    START
+    
+    # Given two integers (int_1 and int_2)
+    SET sum = int_1 + int_2
+    READ sum
+    
+    END
+
+2. Casual
+    - Given an array of strings
+    - Extract the first string from the array and assign it to a new variable
+    - Iterate through the remainder of the array, concatonating each remaining string to the new variable
+    - Return that variable
+    
+  Formal
+    START
+    
+    # Given an array of strings
+    SET iterator = 0
+    SET new_string = nil
+    
+    IF iterator <= Length of array
+      IF new_string = nil
+        new_string = string at array[0]
+      ELSE
+        new_string += array[iterator]
+    
+    iterator = iterator + 1
+    
+    READ new_string
+    
+    END
+
+3. Casual
+  - Given an array of integers
+  - Create a new, empty array
+  - Creat a variable called "counter" and set it to 0
+  - Iterate through the given array, keeping track of iterations with counter
+  - If counter is an even number (including zero), move the "counter-ith" element from the given array to the new array
+  - If counter is an odd number, skip over that element
+  - Return the new array
+  
+  Formal
+  
+  START
+  
+  # Given an array of integers
+  SET new_array = []
+  SET counter = 0
+  
+  WHILE counter >= length of old_array - 1
+    IF counter is even number
+      add element at counter-ith position in old_array to new_array
+    ELSE
+      skip
+  
+  READ new_array
+  
+  END
