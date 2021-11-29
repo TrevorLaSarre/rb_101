@@ -1,0 +1,17 @@
+Questions:
+  - What should the method return if the input is not a string?
+  - What constitutes a substring?
+
+Input: String
+Output: An array containing strings
+
+Rules:
+  Explicit:
+    - The method should return all substrings of the input string that are palindromes
+    - Palindromes are case sensitive (mom is a palindrome while Mom is not)
+    
+  Implicit:
+    - The method should return an array of strings
+    - The substrings do not need to be separate words -- arrangements of letters within the input string count
+    - If there is no input, the method should return an empty array
+    - If the input string does not contain any palindromes, the method should return and empty array
